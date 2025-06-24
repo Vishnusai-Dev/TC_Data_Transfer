@@ -20,7 +20,7 @@ if uploaded_master and uploaded_files:
             output_zip = BytesIO()
             zipf = zipfile.ZipFile(output_zip, 'w', zipfile.ZIP_DEFLATED)
 
-            df_master = pd.read_excel(uploaded_master, sheet_name="Master Data", header=3)  # Reads from row 4 (0-indexed = 3)
+            df_master = pd.read_excel(uploaded_master, sheet_name="Master Data", header=4)  # Reads from row 4 (0-indexed = 3)
 
             for file in uploaded_files:
                 try:
